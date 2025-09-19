@@ -439,6 +439,8 @@ const navItems = [
   { label: "Compliance", hasDropdown: true },
   { label: "Platform", hasDropdown: true },
   { label: "Industries", hasDropdown: true },
+  { label: "Company",  href: "/Company" },
+  { label: "Education",  href: "/education" },
   { label: "Regulations", hasDropdown: true },
   { label: "Resources", hasDropdown: true },
   { label: "About RePut", href: "/about" },
