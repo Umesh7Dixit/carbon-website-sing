@@ -475,9 +475,10 @@ const RegulationsItems = [
 ]
 
 const resourcesItems = [
-  {label:"News letter" , href:"/news",image:"/news.png"},
-  {label:"Case studies" , href:"/resources/casestudies",image:"/case.png"},
-  // {label:"Blogs & Articles" , href:"/resources/blogs",image:"/e.png"},
+  // {label:"News letter" , href:"/news",image:"/news.png"},
+  {label:"News letter" , href:"/resources/newsletter",image:"/news.png"},
+  // {label:"Case studies" , href:"/resources/casestudies",image:"/case.png"},
+  {label:"Blogs" , href:"/resources/blogs",image:"/e.png"},
 ]
 
 export default function Navbar() {
