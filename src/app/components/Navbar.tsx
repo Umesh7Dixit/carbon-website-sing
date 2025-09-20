@@ -453,6 +453,9 @@ const industriesItems = [
 ];
 
 const platformItems = [
+  { label: "Audit", href: "/platform/audit", image: "/chain.png" },
+  { label: "ESG & Carbon Reporting", href: "/platform/esg&carbonreporting", image: "/chain.png" },
+  { label: "Compliance", href: "/platform/compliance", image: "/chain.png" },
   { label: "Tracechain", href: "/platform/tracechain", image: "/chain.png" },
   { label: "Zero Carbon", href: "/platform/zerocarbon", image: "/e.png" },
   { label: "RePut Circle", href: "/platform/circle", image: "/rc.png" },
