@@ -457,6 +457,8 @@ const platformItems = [
   { label: "Audit", href: "/platform/audit", image: "/chain.png" },
   { label: "ESG & Carbon Reporting", href: "/platform/esg&carbonreporting", image: "/chain.png" },
   { label: "Compliance", href: "/platform/compliance", image: "/chain.png" },
+  { label: "LCA", href: "/platform/lca", image: "/chain.png" },
+  { label: "Corporate Carbon FootPrint", href: "/platform/corporateCarbon", image: "/chain.png" },
   { label: "Carbon Credit", href: "/platform/carbonCredit", image: "/chain.png" },
   { label: "Carbon Capturing Unit", href: "/platform/carboncapturingunit", image: "/chain.png" },
   // { label: "Tracechain", href: "/platform/tracechain", image: "/chain.png" },
