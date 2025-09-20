@@ -436,15 +436,16 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   // { label: "Home", href: "/", hasDropdown: false },
-  { label: "Compliance", hasDropdown: true },
+  // { label: "Compliance", hasDropdown: true },
   { label: "Platform", hasDropdown: true },
-  { label: "Industries", hasDropdown: true },
+  { label: "Regulations", hasDropdown: true },
+  { label: "Why us", href: "/whyus" },
+  { label: "Resources", hasDropdown: true },
   { label: "Company",  href: "/Company" },
   { label: "Education",  href: "/education" },
-  { label: "Regulations", hasDropdown: true },
-  { label: "Resources", hasDropdown: true },
-  { label: "About RePut", href: "/about" },
-  { label: "Policies", href: "/policie" }
+  // { label: "Industries", hasDropdown: true },
+  // { label: "About RePut", href: "/about" },
+  // { label: "Policies", href: "/policie" }
 ];
 
 const industriesItems = [
@@ -456,9 +457,11 @@ const platformItems = [
   { label: "Audit", href: "/platform/audit", image: "/chain.png" },
   { label: "ESG & Carbon Reporting", href: "/platform/esg&carbonreporting", image: "/chain.png" },
   { label: "Compliance", href: "/platform/compliance", image: "/chain.png" },
-  { label: "Tracechain", href: "/platform/tracechain", image: "/chain.png" },
-  { label: "Zero Carbon", href: "/platform/zerocarbon", image: "/e.png" },
-  { label: "RePut Circle", href: "/platform/circle", image: "/rc.png" },
+  { label: "Carbon Credit", href: "/platform/carbonCredit", image: "/chain.png" },
+  { label: "Carbon Capturing Unit", href: "/platform/carboncapturingunit", image: "/chain.png" },
+  // { label: "Tracechain", href: "/platform/tracechain", image: "/chain.png" },
+  // { label: "Zero Carbon", href: "/platform/zerocarbon", image: "/e.png" },
+  // { label: "RePut Circle", href: "/platform/circle", image: "/rc.png" },
 ];
 
 const complianceItems = [
