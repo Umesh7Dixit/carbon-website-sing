@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Mail } from 'lucide-react';
+import Image from 'next/image';
 
 // Types
 interface NewsItem {
@@ -18,86 +19,86 @@ const newsData: NewsItem[] = [
     id: '1',
     title: 'Supplier of EUDR Products Do Not Need to Integrate with any API',
     date: 'August 20, 2022',
-    image: '/api/placeholder/300/200',
+    image: '/suppliergyv.png',
     excerpt: 'Latest updates on EUDR compliance requirements and API integration standards.'
   },
   {
     id: '2',
     title: 'New Sustainability Standards Transform Supply Chain Management',
     date: 'August 20, 2022',
-    image: '/api/placeholder/300/200',
+    image: '/iyiy.png',
     excerpt: 'How new sustainability standards are reshaping supply chain operations globally.'
   },
   {
     id: '3',
     title: 'Digital Innovation Drives Environmental Compliance Forward',
     date: 'August 20, 2022',
-    image: '/api/placeholder/300/200',
+    image: '/digitalft.png',
     excerpt: 'Exploring how digital transformation is enhancing environmental compliance efforts.'
   },
-  {
-    id: '4',
-    title: 'Forest Management Technology Advances in 2022',
-    date: 'August 18, 2022',
-    image: '/api/placeholder/300/200',
-    excerpt: 'Revolutionary technologies changing forest management and conservation practices.'
-  },
-  {
-    id: '5',
-    title: 'Supply Chain Transparency: The New Business Imperative',
-    date: 'August 16, 2022',
-    image: '/api/placeholder/300/200',
-    excerpt: 'Why transparency has become crucial for modern supply chain operations.'
-  },
-  {
-    id: '6',
-    title: 'Carbon Footprint Reduction Strategies for Enterprises',
-    date: 'August 14, 2022',
-    image: '/api/placeholder/300/200',
-    excerpt: 'Practical approaches to reducing corporate carbon emissions effectively.'
-  },
-  {
-    id: '7',
-    title: 'Regulatory Compliance in the Digital Age',
-    date: 'August 12, 2022',
-    image: '/api/placeholder/300/200',
-    excerpt: 'Navigating complex regulations with digital tools and platforms.'
-  },
-  {
-    id: '8',
-    title: 'Sustainable Sourcing: Best Practices for 2022',
-    date: 'August 10, 2022',
-    image: '/api/placeholder/300/200',
-    excerpt: 'Guidelines for implementing sustainable sourcing practices in your organization.'
-  },
-  {
-    id: '9',
-    title: 'AI-Powered Environmental Monitoring Solutions',
-    date: 'August 8, 2022',
-    image: '/api/placeholder/300/200',
-    excerpt: 'How artificial intelligence is revolutionizing environmental monitoring.'
-  },
-  {
-    id: '10',
-    title: 'Trade Compliance Updates: What You Need to Know',
-    date: 'August 6, 2022',
-    image: '/api/placeholder/300/200',
-    excerpt: 'Latest updates in international trade compliance requirements.'
-  },
-  {
-    id: '11',
-    title: 'Green Technology Adoption Trends',
-    date: 'August 4, 2022',
-    image: '/api/placeholder/300/200',
-    excerpt: 'Current trends in green technology adoption across industries.'
-  },
-  {
-    id: '12',
-    title: 'ESG Reporting Standards Evolution',
-    date: 'August 2, 2022',
-    image: '/api/placeholder/300/200',
-    excerpt: 'How ESG reporting standards continue to evolve and impact businesses.'
-  }
+  // {
+  //   id: '4',
+  //   title: 'Forest Management Technology Advances in 2022',
+  //   date: 'August 18, 2022',
+  //   image: '/api/placeholder/300/200',
+  //   excerpt: 'Revolutionary technologies changing forest management and conservation practices.'
+  // },
+  // {
+  //   id: '5',
+  //   title: 'Supply Chain Transparency: The New Business Imperative',
+  //   date: 'August 16, 2022',
+  //   image: '/api/placeholder/300/200',
+  //   excerpt: 'Why transparency has become crucial for modern supply chain operations.'
+  // },
+  // {
+  //   id: '6',
+  //   title: 'Carbon Footprint Reduction Strategies for Enterprises',
+  //   date: 'August 14, 2022',
+  //   image: '/api/placeholder/300/200',
+  //   excerpt: 'Practical approaches to reducing corporate carbon emissions effectively.'
+  // },
+  // {
+  //   id: '7',
+  //   title: 'Regulatory Compliance in the Digital Age',
+  //   date: 'August 12, 2022',
+  //   image: '/api/placeholder/300/200',
+  //   excerpt: 'Navigating complex regulations with digital tools and platforms.'
+  // },
+  // {
+  //   id: '8',
+  //   title: 'Sustainable Sourcing: Best Practices for 2022',
+  //   date: 'August 10, 2022',
+  //   image: '/api/placeholder/300/200',
+  //   excerpt: 'Guidelines for implementing sustainable sourcing practices in your organization.'
+  // },
+  // {
+  //   id: '9',
+  //   title: 'AI-Powered Environmental Monitoring Solutions',
+  //   date: 'August 8, 2022',
+  //   image: '/api/placeholder/300/200',
+  //   excerpt: 'How artificial intelligence is revolutionizing environmental monitoring.'
+  // },
+  // {
+  //   id: '10',
+  //   title: 'Trade Compliance Updates: What You Need to Know',
+  //   date: 'August 6, 2022',
+  //   image: '/api/placeholder/300/200',
+  //   excerpt: 'Latest updates in international trade compliance requirements.'
+  // },
+  // {
+  //   id: '11',
+  //   title: 'Green Technology Adoption Trends',
+  //   date: 'August 4, 2022',
+  //   image: '/api/placeholder/300/200',
+  //   excerpt: 'Current trends in green technology adoption across industries.'
+  // },
+  // {
+  //   id: '12',
+  //   title: 'ESG Reporting Standards Evolution',
+  //   date: 'August 2, 2022',
+  //   image: '/api/placeholder/300/200',
+  //   excerpt: 'How ESG reporting standards continue to evolve and impact businesses.'
+  // }
 ];
 
 export default function Newsletter(){
@@ -215,9 +216,10 @@ export default function Newsletter(){
                 <div className="md:w-64 flex-shrink-0">
                   <div className="w-full h-48 md:h-32 bg-gradient-to-br from-green-100 to-green-50 rounded-lg overflow-hidden">
                     <div className="w-full h-full bg-gradient-to-t from-green-200/30 to-green-100/30 flex items-center justify-center">
-                      <div className="text-green-600/70 text-sm font-medium">
+                      {/* <div className="text-green-600/70 text-sm font-medium">
                         News Image {startIndex + index + 1}
-                      </div>
+                      </div> */}
+                      <Image width={400} height={400} src={newsItem.image} alt={`${index+'awd'}`}/>
                     </div>
                   </div>
                 </div>

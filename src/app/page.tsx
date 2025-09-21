@@ -1,16 +1,4 @@
 import HeroSection from "./components/HeroSection";
-// import EUSection from "./components/EUSection";
-// import SolutionsSection from "./components/SolutionsSection";
-// import TextileChallenges from "./components/TextileChallenges";
- 
-// import IndustryTransformations from "./components/IndustryTransformations";
-// import SustainabilitySection from "./components/SustainabilitySection";
-// import CarbonCalculatorBanner from "./components/CarbonCalculatorBanner";
-// import StoriesOfImpact from "./components/StoriesOfImpact";
-// import Testimonials from "./components/Testimonials";
-// import SimpleBanner from "./components/SimpleBanner";
-// import Earth from "./components/earth";
-// import Eudr from "./components/Eudr";
 import Trusted from "./components/Trusted";
 import ESGInsights from "./components/ESGInsights";
 import CarbonSoftware from "./components/CarbonSoftware";
@@ -23,9 +11,7 @@ import Journey from "./components/Journey";
 import CarbonZeroPlatform from "./components/CarbonZeroPlatform";
 import CarbonMilestonePlatform from "./components/CarbonMilestonePlatform";
 import TestimonialsSection from "./components/Testimonials";
-
  
-
  
 export default function Home() {
   return (
@@ -42,23 +28,8 @@ export default function Home() {
       <CarbonZero />
       <CarbonFootprint />
       <LatestResources />
-      {/* <Testimonials/> */}
       <TestimonialsSection/>
       <Journey/>
-
-
-      {/* <EUSection />
-      <SolutionsSection/>
-     
-      <Earth/>
-      <TextileChallenges/>
-
-      <Eudr/>
-      <IndustryTransformations/>
-      <SustainabilitySection/>
-      <CarbonCalculatorBanner/>
-      <StoriesOfImpact/>  
-      <SimpleBanner/> */}
 
     </main>
   </>
