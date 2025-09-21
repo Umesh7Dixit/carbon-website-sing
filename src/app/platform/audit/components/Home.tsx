@@ -1,11 +1,15 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 import Image from "next/image";
+import { useContact } from "../../../components/ContactContext"; 
+
 
 export default function Home() {
-  const [showTrial, setShowTrial] = useState(false);
-  const [showDemo, setShowDemo] = useState(false);
+  // const [showTrial, setShowTrial] = useState(false);
+  // const [showDemo, setShowDemo] = useState(false);
+    const { scrollToContact } = useContact();
+
 
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-gray-900">
@@ -35,13 +39,15 @@ export default function Home() {
         {/* CTA Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-6">
           <button
-            onClick={() => setShowTrial(true)}
+            // onClick={() => setShowTrial(true)}
+            onClick={scrollToContact}
             className="px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold transition"
           >
             Start Free Trial
           </button>
           <button
-            onClick={() => setShowDemo(true)}
+            // onClick={() => setShowDemo(true)}
+            onClick={scrollToContact}
             className="px-6 py-3 rounded-full border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black font-semibold transition"
           >
             Schedule Demo
@@ -50,10 +56,10 @@ export default function Home() {
       </div>
 
       {/* Interactive Modals */}
-      {showTrial && (
+      {/* {showTrial && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl shadow-lg p-6 max-w-md w-full text-center">
-            <h2 className="text-xl font-bold mb-4">Start Free Trial</h2>
+            <h2 className="text-xl font-bold mb-4" onClick={scrollToContact}>Start Free Trial</h2>
             <p className="text-gray-600 mb-4">
               Thanks for your interest! Our trial setup will be emailed to you.
             </p>
@@ -70,7 +76,7 @@ export default function Home() {
       {showDemo && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl shadow-lg p-6 max-w-md w-full text-center">
-            <h2 className="text-xl font-bold mb-4">Schedule Demo</h2>
+            <h2 className="text-xl font-bold mb-4" onClick={scrollToContact}>Schedule Demo</h2>
             <p className="text-gray-600 mb-4">
               Our team will reach out to schedule your personalized demo.
             </p>
@@ -82,7 +88,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

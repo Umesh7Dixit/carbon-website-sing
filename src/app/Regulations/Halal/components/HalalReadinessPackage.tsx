@@ -3,15 +3,15 @@ import { FileText, MapPin, GraduationCap } from 'lucide-react';
 
 export default function HalalReadinessPackage(){
   return (
-    <div className="min-h-screen bg-white p-8">
+    <div className="h-[60vh] bg-white p-8">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 mt-8">
           {/* Leaf Icon */}
           
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-700 leading-tight mb-8 max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-[50px] font-bold text-slate-700 leading-tight mb-8   w-[110%]">
              Halal Certification doesn’t have to be difficult.
           </h1>
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, X, Eye, FileText, BarChart3, Globe, Thermometer, TrendingUp } from 'lucide-react';
+import { useContact } from "../../../components/ContactContext"; 
 
 interface ReportTemplate {
   id: string;
@@ -24,6 +25,8 @@ interface AssistantQuestion {
 }
 
 export default function ESGComplianceApp(){
+    const { scrollToContact } = useContact();
+
   const [currentScreen, setCurrentScreen] = useState<'main' | 'assistant'>('main');
   const [selectedTemplate, setSelectedTemplate] = useState<ReportTemplate | null>(null);
   const [formData, setFormData] = useState<FormData>({
@@ -146,7 +149,7 @@ export default function ESGComplianceApp(){
             streamlines data workflows, enhances accuracy, and helps you meet investor and market 
             expectations with ease.
           </p>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+          <button onClick={scrollToContact} className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
             Explore Report Types
           </button>
         </div>

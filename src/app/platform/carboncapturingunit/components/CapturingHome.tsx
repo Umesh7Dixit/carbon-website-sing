@@ -1,11 +1,15 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 import Image from "next/image";
+import { useContact } from "../../../components/ContactContext"; 
+
 
 export default function CapturingHome() {
-  const [showTrial, setShowTrial] = useState(false);
-  const [showDemo, setShowDemo] = useState(false);
+  // const [showTrial, setShowTrial] = useState(false);
+  // const [showDemo, setShowDemo] = useState(false);
+    const { scrollToContact } = useContact();
+
 
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-gray-900">
@@ -34,13 +38,15 @@ export default function CapturingHome() {
         {/* CTA Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-6">
           <button
-            onClick={() => setShowTrial(true)}
+            // onClick={() => setShowTrial(true)}
+            onClick={scrollToContact}
             className="px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold transition"
           >
             Start Monitoring
           </button>
           <button
-            onClick={() => setShowDemo(true)}
+            // onClick={() => setShowDemo(true)}
+            onClick={scrollToContact}
             className="px-6 py-3 rounded-full border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black font-semibold transition"
           >
             learn More
@@ -49,7 +55,7 @@ export default function CapturingHome() {
       </div>
 
       {/* Interactive Modals */}
-      {showTrial && (
+      {/* {showTrial && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl shadow-lg p-6 max-w-md w-full text-center">
             <h2 className="text-xl font-bold mb-4">Start Free Trial</h2>
@@ -81,7 +87,7 @@ export default function CapturingHome() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

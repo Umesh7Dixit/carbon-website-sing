@@ -57,36 +57,36 @@ export default function HalalTimeline(){
       year: '2025',
       // title: 'Market Preference',
       title: 'Digital traceability and blockchain adoption strengthen Halal integrity.',
-      isActive: true,
-      color: 'bg-slate-700',
-      textColor: 'text-slate-700'
+      isActive: false,
+      color: 'bg-green-400',
+      textColor: 'text-green-400'
     }
     ,
     {
       year: '2026',
       // title: 'Market Preference',
       title: 'Halal certification begins integration with ESG and sustainability frameworks.',
-      isActive: true,
-      color: 'bg-slate-700',
-      textColor: 'text-slate-700'
+      isActive: false,
+      color: 'bg-green-400',
+      textColor: 'text-green-400'
     }
     ,
     {
       year: '2027',
       // title: 'Market Preference',
       title: 'Cross-border mutual recognition agreements expand certification acceptance.',
-      isActive: true,
-      color: 'bg-slate-700',
-      textColor: 'text-slate-700'
+      isActive: false,
+      color: 'bg-green-400',
+      textColor: 'text-green-400'
     }
     ,
     {
       year: '2028',
       // title: 'Market Preference',
       title: 'Halal certification adopted as a baseline standard across global supply chains.',
-      isActive: true,
-      color: 'bg-slate-700',
-      textColor: 'text-slate-700'
+      isActive: false,
+      color: 'bg-green-400',
+      textColor: 'text-green-400'
     }
   ];
 

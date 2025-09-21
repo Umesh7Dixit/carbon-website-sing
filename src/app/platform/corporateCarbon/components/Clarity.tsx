@@ -2,8 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import Image from 'next/image';
+import { useContact } from "../../../components/ContactContext"; 
+
 
 export default function Clarity (){
+    const { scrollToContact } = useContact();
+  
+
   const features = [
     {
       title: "Trusted Methodology",
@@ -163,6 +168,7 @@ export default function Clarity (){
             {/* CTA Button */}
             <motion.div variants={buttonVariants}>
               <motion.button
+              onClick={scrollToContact} 
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"

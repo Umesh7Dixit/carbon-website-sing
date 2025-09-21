@@ -434,11 +434,12 @@ import Image from "next/image";
 import { SetStateAction, useState } from "react";
 import { usePathname } from "next/navigation";
 
+
 const navItems = [
   // { label: "Home", href: "/", hasDropdown: false },
   // { label: "Compliance", hasDropdown: true },
   { label: "Platform", hasDropdown: true },
-  { label: "Regulations", hasDropdown: true },
+  { label: "Regulations", href: "/Regulations" },
   { label: "Why us", href: "/whyus" },
   { label: "Resources", hasDropdown: true },
   { label: "Company",  href: "/Company" },
@@ -474,14 +475,15 @@ const complianceItems = [
 
 // const whyReputItems = [
 const RegulationsItems = [
-  {label:"EUDR"  ,href:"/Regulations/EUDR", image:"/chain.png"},
-  {label:"BURSA" ,href:"/Regulations/BURSA", image:"/e.png"},
-  {label:"CBAM" ,href:"/Regulations/CBAM", image:"/e.png"},
-  {label:"RSPO" ,href:"/Regulations/RSPO", image:"/e.png"},
-  {label:"Halal" ,href:"/Regulations/Halal", image:"/e.png"},
-  {label:"SGX" ,href:"/Regulations/SGX", image:"/e.png"},
-  {label:"TCFD" ,href:"/Regulations/TCFD", image:"/e.png"},
-  {label:"GHG" ,href:"/Regulations/GHG", image:"/e.png"},
+  {label:"Regulations"  ,href:"/Regulations", image:"/chain.png"},
+  // {label:"EUDR"  ,href:"/Regulations/EUDR", image:"/chain.png"},
+  // {label:"BURSA" ,href:"/Regulations/BURSA", image:"/e.png"},
+  // {label:"CBAM" ,href:"/Regulations/CBAM", image:"/e.png"},
+  // {label:"RSPO" ,href:"/Regulations/RSPO", image:"/e.png"},
+  // {label:"Halal" ,href:"/Regulations/Halal", image:"/e.png"},
+  // {label:"SGX" ,href:"/Regulations/SGX", image:"/e.png"},
+  // {label:"TCFD" ,href:"/Regulations/TCFD", image:"/e.png"},
+  // {label:"GHG" ,href:"/Regulations/GHG", image:"/e.png"},
 ]
 
 const resourcesItems = [
@@ -551,11 +553,11 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" prefetch>
           <Image 
-            src="/logonew.png" 
-            alt="RePut" 
+            src="/logoScan.png" 
+            alt="CarbonScan.ai" 
             width={120} 
             height={50}
-            className="sm:w-[140px] sm:h-[45px]"
+            className="sm:w-[216px] sm:h-[85px] absolute left-[89px] bottom-[1px]"
           />
         </Link>
 
@@ -574,7 +576,8 @@ export default function Navbar() {
               >
                 {item.hasDropdown ? (
                   <div className="relative">
-                    <span className={`cursor-pointer py-2 px-1 transition-colors relative ${
+                    <span  
+                      className={`cursor-pointer py-2 px-1 transition-colors relative ${
                       isActive 
                         ? 'text-white' 
                         // : 'text-white hover:text-black'
@@ -675,7 +678,7 @@ export default function Navbar() {
 
 
                     {/* RegulationsItems Dropdown */}
-                    {item.label === "Regulations" && (
+                    {/* {item.label === "Regulations" && (
                       <div className="flex flex-col gap-3 w-60">
                         {RegulationsItems.map(Regulations => {
                           const isPlatformActive = pathname === Regulations.href;
@@ -703,7 +706,7 @@ export default function Navbar() {
                           );
                         })}
                       </div>
-                    )}
+                    )} */}
 
 
 
@@ -938,7 +941,7 @@ export default function Navbar() {
                         })}
 
 
-                        
+{/*                         
                         {item.label === "Regulations" && RegulationsItems.map(Regulations => {
                           const isPlatformActive = pathname === Regulations.href;
                           
@@ -964,7 +967,9 @@ export default function Navbar() {
                               {Regulations.label}
                             </Link>
                           );
-                        })}
+                        })} */}
+
+
 
                         {item.label === "Compliance" && complianceItems.map(compliance => {
                           const isComplianceActive = pathname === compliance.href;

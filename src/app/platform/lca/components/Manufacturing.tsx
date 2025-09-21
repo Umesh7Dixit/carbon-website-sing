@@ -2,8 +2,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useContact } from "../../../components/ContactContext"; 
+
 
 export default function Manufacturing() {
+    const { scrollToContact } = useContact();
+  
   return (
     <section className="min-h-screen flex items-center justify-center px-6 py-12 bg-white">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -28,12 +32,14 @@ export default function Manufacturing() {
         <div className="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-6">
           <button
             // onClick={() => setShowTrial(true)}
+            onClick={scrollToContact} 
             className="px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold transition"
           >
             Book a demo
           </button>
           <button
             // onClick={() => setShowDemo(true)}
+            onClick={scrollToContact} 
             className="px-6 py-3 rounded-full border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black font-semibold transition"
           >
             Explore the platform

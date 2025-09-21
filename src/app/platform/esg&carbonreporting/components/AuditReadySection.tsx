@@ -5,8 +5,12 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import { useContact } from "../../../components/ContactContext"; 
+
 
 export default function AuditReadySection() {
+    const { scrollToContact } = useContact();
+
   return (
     <section className="h-[90vh] bg-[#0F3B33] text-white py-16 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -45,7 +49,8 @@ export default function AuditReadySection() {
           </ul>
 
           <motion.a
-            href="#"
+            // href="#"
+            onClick={scrollToContact} 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center justify-center bg-green-400 text-[#0F3B33] px-6 py-3 rounded-full font-semibold shadow-md hover:bg-green-300 transition"

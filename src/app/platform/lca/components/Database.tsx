@@ -4,8 +4,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useContact } from "../../../components/ContactContext"; 
+
 
 export default function Database() {
+    const { scrollToContact } = useContact();
+  
   return (
     <section className="h-[60vh] flex items-center justify-center px-6 py-12 bg-white">
       <div className="max-w-8xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -55,6 +59,7 @@ export default function Database() {
         <div className="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-6">
           <button
             // onClick={() => setShowTrial(true)}
+            onClick={scrollToContact} 
             className="px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold transition"
           >
             Book a demo

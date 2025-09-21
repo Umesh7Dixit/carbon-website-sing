@@ -10,25 +10,25 @@ export default function ESGInsights() {
       title: "AI-Smart Data Collection",
       description:
         "Our in-house developed GreenLens technology makes ESG data collection effortless—just capture pictures, and the system does the rest.",
-      icon: <FaChartBar className="text-green-600 text-3xl" />,
+      icon: <FaChartBar className="text-[#8DD95B] text-3xl" />,
     },
     {
       title: "One Reliable Source Of Truth",
       description:
         "Convert scattered data to centralized data through a unified system, making reporting effortless and transparent.",
-      icon: <BsDatabaseFillCheck className="text-green-600 text-3xl" />,
+      icon: <BsDatabaseFillCheck className="text-[#8DD95B] text-3xl" />,
     },
     {
       title: "No More Boring Excel Templates",
       description:
         "Remove slow, error-prone manual work with automated processes through ERP integration and bulk upload, that keep things moving.",
-      icon: <RiFileExcel2Fill className="text-green-600 text-3xl" />,
+      icon: <RiFileExcel2Fill className="text-[#8DD95B] text-3xl" />,
     },
     {
       title: "Clean & Trusted Data",
       description:
         "Automated checks detect and eliminate duplicates, anomalies, outliers, and inconsistencies—delivering clean, reliable insights that keep your reports audit-ready and you fully prepared.",
-      icon: <FaShieldAlt className="text-green-600 text-3xl" />,
+      icon: <FaShieldAlt className="text-[#8DD95B] text-3xl" />,
     },
   ];
 

@@ -11,6 +11,7 @@ import Journey from "./components/Journey";
 import CarbonZeroPlatform from "./components/CarbonZeroPlatform";
 import CarbonMilestonePlatform from "./components/CarbonMilestonePlatform";
 import TestimonialsSection from "./components/Testimonials";
+// import ContactHome from "./components/ContactHome";
  
  
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
       <LatestResources />
       <TestimonialsSection/>
       <Journey/>
+      {/* <ContactHome/> */}
 
     </main>
   </>

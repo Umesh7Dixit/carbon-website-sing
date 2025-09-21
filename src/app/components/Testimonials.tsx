@@ -111,8 +111,8 @@ export default function TestimonialsSection(){
           {/* Testimonial Card */}
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 lg:p-12 shadow-xl relative overflow-hidden">
             {/* Quote Icon */}
-            <div className="absolute top-8 left-8 text-6xl text-green-200 font-serif leading-none">
-              &quot;
+            <div className="absolute bottom-44 left-8 text-9xl text-[#193939] font-semibold leading-none">
+              &ldquo;
             </div>
 
             {/* Content */}
@@ -137,15 +137,15 @@ export default function TestimonialsSection(){
 
               {/* Text Content */}
               <div className="flex-1 text-center lg:text-left">
-                <blockquote className="text-xl lg:text-2xl text-gray-800 font-medium leading-relaxed mb-6 transition-all duration-700">
+                <blockquote className="text-xl lg:text-[24px] text-[#193939] font-normal leading-relaxed mb-6 transition-all duration-700">
                   &quot;{currentData.quote}&quot;
                 </blockquote>
                 
                 <div className="space-y-1">
-                  <h4 className="text-lg font-bold text-gray-900 transition-all duration-700">
+                  <h4 className="text-lg font-normal text-gray-900 text-[20px] transition-all duration-700">
                     {currentData.name}, {currentData.title}
                   </h4>
-                  <p className="text-gray-600 transition-all duration-700">
+                  <p className="text-gray-600 transition-all text-[18px] duration-700">
                     {currentData.company}
                   </p>
                 </div>
@@ -174,131 +174,10 @@ export default function TestimonialsSection(){
           ))}
         </div>
 
-        {/* Progress Bar */}
-        {/* <div className="max-w-md mx-auto mt-8">
-          <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-green-500 rounded-full transition-all duration-300 ease-linear"
-              style={{
-                width: `${((currentTestimonial + 1) / testimonials.length) * 100}%`
-              }}
-            />
-          </div>
-        </div> */}
-
-        {/* Stats Section */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
-          <div className="space-y-2">
-            <div className="text-3xl lg:text-4xl font-bold text-green-600">500+</div>
-            <div className="text-gray-600 font-medium">Brands Worldwide</div>
-          </div>
-          <div className="space-y-2">
-            <div className="text-3xl lg:text-4xl font-bold text-green-600">60%</div>
-            <div className="text-gray-600 font-medium">Average CO2 Reduction</div>
-          </div>
-          <div className="space-y-2">
-            <div className="text-3xl lg:text-4xl font-bold text-green-600">3 Months</div>
-            <div className="text-gray-600 font-medium">Average Implementation</div>
-          </div>
-        </div> */}
+        
       </div>
     </div>
   );
 };
 
-
-// import React from "react";
-// import Image from "next/image";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation, Pagination } from "swiper/modules";
-
-// interface Testimonial {
-//   id: number;
-//   name: string;
-//   role: string;
-//   company: string;
-//   text: string;
-//   avatar: string;
-// }
-
-// export default function Testimonials(){
-//   // Dynamic testimonials array
-//   const testimonials: Testimonial[] = [
-//     {
-//       id: 1,
-//       name: "Seraphina Rossi",
-//       role: "CEO",
-//       company: "B77, Fashion brand",
-//       text: `Carbonscan helped us trace over 60% of our raw materials in less than 3 months, with full verification. Their team understands both the tech and the real-world problems of sustainability.`,
-//       avatar: "/avatar1.jpg",
-//     },
-//     {
-//       id: 2,
-//       name: "John Doe",
-//       role: "Sustainability Manager",
-//       company: "EcoCorp",
-//       text: `The platform simplified our reporting and saved us countless hours of manual work.`,
-//       avatar: "/avatar2.jpg",
-//     },
-//     {
-//       id: 3,
-//       name: "Maria Smith",
-//       role: "Founder",
-//       company: "GreenTech",
-//       text: `We achieved net-zero targets faster thanks to Carbonscan's AI-powered tools.`,
-//       avatar: "/avatar3.jpg",
-//     },
-//   ];
-
-//   return (
-//     <section className="py-16 bg-white">
-//       <div className="max-w-4xl mx-auto px-6 text-center">
-//         <p className="text-green-500 font-medium">Testimonials</p>
-//         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-1">
-//           Loved by Brands Worldwide
-//         </h2>
-//       </div>
-
-//       <div className="mt-10 max-w-5xl mx-auto px-6">
-//         <Swiper
-//           modules={[Navigation, Pagination]}
-//           navigation
-//           pagination={{ clickable: true }}
-//           spaceBetween={30}
-//           slidesPerView={1}
-//           className="!pb-12"
-//         >
-//           {testimonials.map((item) => (
-//             <SwiperSlide key={item.id}>
-//               <div className="bg-green-50 rounded-2xl shadow-md p-6 md:p-10 flex flex-col md:flex-row items-center gap-6">
-//                 {/* Avatar */}
-//                 <div className="relative w-24 h-24 flex-shrink-0">
-//                   <Image
-//                     src={item.avatar}
-//                     alt={item.name}
-//                     fill
-//                     className="object-cover rounded-full"
-//                   />
-//                   <span className="absolute bottom-0 right-0 bg-green-800 text-white text-xs px-2 py-0.5 rounded-full">
-//                     TBD
-//                   </span>
-//                 </div>
-//                 {/* Text */}
-//                 <div className="text-left">
-//                   <p className="text-gray-700 text-lg italic">
-//                     “{item.text}”
-//                   </p>
-//                   <p className="mt-4 font-semibold text-gray-900">
-//                     {item.name}, {item.role}
-//                   </p>
-//                   <p className="text-gray-500">{item.company}</p>
-//                 </div>
-//               </div>
-//             </SwiperSlide>
-//           ))}
-//         </Swiper>
-//       </div>
-//     </section>
-//   );
-// };
-
+ 

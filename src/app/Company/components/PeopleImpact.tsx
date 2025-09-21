@@ -10,15 +10,15 @@ export default function PeopleImpact() {
           {/* Left side - Images Grid */}
           <div className="grid grid-cols-3 gap-4">
             {[
-              "/team1.jpg",
-              "/team2.jpg",
-              "/team3.jpg",
-              "/team4.jpg",
-              "/team5.jpg",
-              "/team6.jpg",
-              "/team7.jpg",
-              "/team8.jpg",
-              "/team9.jpg",
+              "/abd.png",
+              "/nojo.png",
+              "/nioj.png",
+              "/niohio.png",
+              "/nilh.png",
+              "/nio.png",
+              "/buiio.png",
+              "/nioopo.png",
+              "/iohio.png",
             ].map((src, index) => (
               <div
                 key={index}

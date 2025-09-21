@@ -1,8 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { useContact } from "../../components/ContactContext"; 
 
 export default  function TakeControl(){
+    const { scrollToContact } = useContact();
+  
   return (
     <section className="bg-white w-full h-screen">
       <div className="max-w-7xl mx-auto h-full flex items-center px-4">
@@ -16,7 +19,7 @@ export default  function TakeControl(){
               Turn complex emissions data into clear insights with Carbon-Zero — for accurate reporting, compliance, and smarter climate action.
             </p>
             <br/>
-            <button
+            <button onClick={scrollToContact}
                   className="px-8 py-3 w-[38%] rounded-full  border border-[#8DD95B] text-bllalck font-medium hover:bg-[#8DD95B] focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-colors bg-[#8DD95B] duration-200 disabled:bg-green-600 disabled:cursor-not-allowed"
                 >
                   Speak to an expert

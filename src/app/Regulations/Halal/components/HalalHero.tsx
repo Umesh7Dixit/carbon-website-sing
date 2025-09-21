@@ -11,7 +11,7 @@ export default  function HalalHero(){
       
       <div className="relative text-center px-4 sm:px-6 lg:px-8 max-w-3xl z-10">
         {/* <div className="text-white text-2xl mb-4">•</div> */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-snug">
+        <h1 className="text-3xl sm:text-4xl md:text-[60px] font-semibold text-white leading-snug">
           Sustainability Made Mandatory: Get Ready For <span className="text-[#8CC63F]">Halal Certification</span>   
         </h1>
          

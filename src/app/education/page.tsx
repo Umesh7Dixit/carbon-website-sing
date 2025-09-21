@@ -1,6 +1,6 @@
 "use client"
 
-import ContactPage from "../Company/components/ContactPage";
+// import ContactPage from "../Company/components/ContactPage";
 import ResourcesSection from "../Company/components/ResourcesSection";
 import CoursesPage from "./components/CoursesPage";
 import LearningPage from "./components/LearningPage";
@@ -16,7 +16,7 @@ export default function Education(){
             <ComplianceTrainingSection/>
             <TestimonialSection/>
             <ResourcesSection/>
-            <ContactPage/>
+            {/* <ContactPage/> */}
         </div>
     );
 }

@@ -1,11 +1,16 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useContact } from "../../components/ContactContext"; 
+
 
 export default function CoursesPage() {
-  const router = useRouter();
+  // const router = useRouter();
+
+    const { scrollToContact } = useContact();
+  
 
   const courses = [
     {
@@ -108,9 +113,11 @@ reduction strategies, set realistic targets, and integrate carbon management int
               )}
 
               <motion.button
+                
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => router.push(`/courses/${course.id}`)}
+                // onClick={() => router.push(`/courses/${course.id}`)}
+                onClick={scrollToContact}
                 className="mt-6 inline-flex items-center justify-center rounded-full bg-green-500 px-6 py-2 text-white font-medium hover:bg-green-600 transition"
               >
                 Learn More →

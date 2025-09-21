@@ -3,8 +3,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useContact } from "../../components/ContactContext"; 
+
 
 export default function ComplianceTrainingSection(){
+    const { scrollToContact } = useContact();
+
   return (
     <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -58,6 +62,7 @@ export default function ComplianceTrainingSection(){
               className="flex flex-col sm:flex-row gap-4"
             >
               <motion.button
+                onClick={scrollToContact}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-green-500 text-white font-medium rounded-full hover:bg-green-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
@@ -66,6 +71,7 @@ export default function ComplianceTrainingSection(){
               </motion.button>
               
               <motion.button
+                onClick={scrollToContact}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-green-500 text-white font-medium rounded-full hover:bg-green-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"

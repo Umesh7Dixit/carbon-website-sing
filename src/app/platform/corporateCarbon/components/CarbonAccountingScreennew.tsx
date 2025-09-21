@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { useContact } from "../../../components/ContactContext"; 
+
 
 export default function CarbonAccountingScreen(){
   const [activeTab, setActiveTab] = useState(0);
+  const { scrollToContact } = useContact();
 
   const tabsData = [
     {
@@ -140,6 +143,7 @@ export default function CarbonAccountingScreen(){
                 transition={{ delay: 0.8, duration: 0.5 }}
               >
                 <motion.button
+                  onClick={scrollToContact}
                   className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-3 group"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}

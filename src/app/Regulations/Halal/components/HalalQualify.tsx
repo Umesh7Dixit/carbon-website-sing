@@ -4,10 +4,14 @@
 
 import React from "react";
 import Image from "next/image";
+import { useContact } from "../../../components/ContactContext"; 
+
 
  
 
 export default function HalalQualify(){
+    const { scrollToContact } = useContact();
+  
 
   return (
    
@@ -37,7 +41,7 @@ export default function HalalQualify(){
 
           {/* Button overlay at bottom */}
           <div className="absolute bottom-10 left-0 right-[40%] flex justify-center">
-            <button className="bg-[#8DD95B] hover:bg-emerald-700 text-white font-medium rounded-lg px-6 py-2 shadow-md transition">
+            <button onClick={scrollToContact} className="bg-[#8DD95B] hover:bg-emerald-700 text-white font-medium rounded-lg px-6 py-2 shadow-md transition">
               Know more →
             </button>
           </div>

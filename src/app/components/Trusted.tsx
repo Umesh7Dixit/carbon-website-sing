@@ -19,7 +19,7 @@ export default function Trusted() {
   ];
 
   return (
-    <section className="bg-[#0e2f2c] py-12 relative overflow-hidden">
+    <section className="bg-[#1A3A3A] pb-12 pt-2 relative overflow-hidden">
       <h2 className="text-center text-2xl sm:text-3xl font-semibold text-white mb-8">
         Trusted By Global Organisation
       </h2>

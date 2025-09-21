@@ -8,19 +8,19 @@ export default function CarbonZeroJourney() {
         
         {/* Left Side - Text */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-[60px] font-bold text-[#1A3A3A] mb-4">
             Accelerate Your <br /> Carbon Zero Journey
           </h2>
-          <p className="text-gray-600 text-lg">
-            Leverage <span className="font-semibold text-gray-800">Carbon Zero</span> to streamline carbon accounting, ESG disclosures, and compliance with global standards.
+          <p className="text-[#1A3A3A] w-[460px] text-lg">
+            Leverage <span className="font-semibold text-[#1A3A3A]">Carbon Zero</span> to streamline carbon accounting, ESG disclosures, and compliance with global standards.
           </p>
         </div>
 
         {/* Right Side - Logos */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 border-l pl-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 border-l-2 border-l-[#1A3A3A] pl-6">
           {/* Regulations & Directives */}
           <div className="col-span-2 sm:col-span-3">
-            <h3 className="font-semibold text-gray-900 mb-4">Regulations & Directives</h3>
+            <h3 className="font-semibold text-[#1A3A3A] mb-4">Regulations & Directives</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
               <Image src="/eurd.png" alt="EURD" width={160} height={80} className="mx-auto" />
               <Image src="/scrd.png" alt="CSRD" width={160} height={80} className="mx-auto" />

@@ -3,9 +3,13 @@
 import React, { useState } from 'react';
 // import { ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import { useContact } from "../components/ContactContext"; 
+
 
 export default function CarbonZeroPlatform(){
   const [activeTab, setActiveTab] = useState('Training');
+    const { scrollToContact } = useContact();
+  
 
   const tabs = ['Training', 'Measure', 'Analyse', 'Plan', 'Reduce', 'Earn'];
 
@@ -21,7 +25,7 @@ export default function CarbonZeroPlatform(){
             climate leadership.
           </p>
         </div>
-        <button className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
+        <button onClick={scrollToContact} className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
           Learn more
         </button>
       </div>
@@ -57,7 +61,7 @@ export default function CarbonZeroPlatform(){
             carbon accounting tools, ensuring compliance and transparency.
           </p>
         </div>
-        <button className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
+        <button onClick={scrollToContact} className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
           Learn more
         </button>
       </div>
@@ -97,7 +101,7 @@ export default function CarbonZeroPlatform(){
             Dive deep into emissions hotspots with automated dashboards, benchmarking, and scenario analysis to identify key opportunities.
           </p>
         </div>
-        <button className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
+        <button onClick={scrollToContact} className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
           Learn more
         </button>
       </div>
@@ -132,7 +136,7 @@ export default function CarbonZeroPlatform(){
             Set science-based targets and design decarbonization strategies tailored to your sector, operations, and long-term goals.
           </p>
         </div>
-        <button className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
+        <button onClick={scrollToContact} className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
           Learn more
         </button>
       </div>
@@ -167,7 +171,7 @@ export default function CarbonZeroPlatform(){
             Implement effective carbon reduction initiatives, optimize energy use, and engage suppliers to minimize your value chain footprint.
           </p>
         </div>
-        <button className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
+        <button onClick={scrollToContact} className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
           Learn more
         </button>
       </div>
@@ -203,7 +207,7 @@ export default function CarbonZeroPlatform(){
             Monetize your sustainability efforts by generating verified carbon credits and accessing green financing opportunities.
           </p>
         </div>
-        <button className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
+        <button onClick={scrollToContact} className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
           Learn more
         </button>
       </div>

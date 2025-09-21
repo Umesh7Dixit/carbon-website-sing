@@ -1,7 +1,7 @@
 "use client"
 
 import ClimateLeadership from "./components/ClimateLeadership";
-import ContactPage from "./components/ContactPage";
+// import ContactPage from "./components/ContactPage";
 import DefinesUs from "./components/DefinesUs ";
 import DifferentiatesUs from "./components/DifferentiatesUs";
 import PeopleImpact from "./components/PeopleImpact";
@@ -18,7 +18,7 @@ export default function Company(){
             <DifferentiatesUs/>
             <ClimateLeadership/>
             <ResourcesSection/>
-            <ContactPage/>
+            {/* <ContactPage/> */}
         </div>
     );
 }

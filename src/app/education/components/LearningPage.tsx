@@ -1,8 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { useContact } from "../../components/ContactContext"; 
 
 export default function LearningPage() {
+    const { scrollToContact } = useContact();
+  
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12 bg-white">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -21,10 +24,13 @@ export default function LearningPage() {
           </p>
 
           <button
-            onClick={() => alert("✅ Expert will contact you soon!")}
+            // onClick={() => alert("✅ Expert will contact you soon!")}
+            onClick={scrollToContact}
             className="mt-6 inline-block rounded-full bg-green-500 px-6 py-3 text-white font-medium shadow-md hover:bg-green-600 transition"
           >
-            Speak to an expert
+            
+            Speak to an expert 
+            
           </button>
         </div>
 

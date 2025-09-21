@@ -7,7 +7,7 @@ export default function CarbonSoftware() {
       {/* Text Content */}
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          <span className="text-green-500">Carbon Accounting Software</span>{" "}
+          <span className="text-[#8DD95B]">Carbon Accounting Software</span>{" "}
           Built From Experience
         </h2>
         <p className="text-lg text-gray-700 mb-6">

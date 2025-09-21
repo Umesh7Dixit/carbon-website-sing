@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
+import { useContact } from "../../components/ContactContext"; 
+
 
 const team = [
   {
@@ -31,6 +33,8 @@ const team = [
 ];
 
 export default function ClimateLeadership(){
+     const { scrollToContact } = useContact();
+   
   return (
     <section className="bg-white py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -45,8 +49,9 @@ export default function ClimateLeadership(){
 
         {/* Button */}
         <motion.a
-          href="#"
-          className="inline-block mt-6 px-6 py-3 rounded-full bg-green-500 text-white font-medium hover:bg-green-600 transition"
+          onClick={scrollToContact}
+           
+          className="inline-block cursor-pointer mt-6 px-6 py-3 rounded-full bg-green-500 text-white font-medium hover:bg-green-600 transition"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

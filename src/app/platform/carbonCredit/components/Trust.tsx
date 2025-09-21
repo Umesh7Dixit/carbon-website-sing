@@ -3,8 +3,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useContact } from "../../../components/ContactContext"; 
+
 
 export default function Trust() {
+    const { scrollToContact } = useContact();
+  
   return (
     <div className="min-h-screen bg-[#123232] flex items-center justify-center px-6 py-10">
       <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-10 items-center">
@@ -33,7 +37,7 @@ export default function Trust() {
           <p className="text-base md:text-lg text-gray-200">
             Empower your sustainability journey with CarbonScan.ai.
           </p>
-          <button className="px-6 py-3 bg-green-400 hover:bg-green-500 text-black font-semibold rounded-full shadow-lg transition">
+          <button onClick={scrollToContact} className="px-6 py-3 bg-green-400 hover:bg-green-500 text-black font-semibold rounded-full shadow-lg transition">
             Explore
           </button>
         </motion.div>

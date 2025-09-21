@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { useContact } from '../../components/ContactContext';
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -10,6 +12,9 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+
+  const { contactRef } = useContact();
+  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,7 +32,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-10 bg-white">
+    <div ref={contactRef} className="min-h-screen flex items-center justify-center px-4 py-10 bg-white">
       <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-10">
         
         {/* Left Side - Form */}

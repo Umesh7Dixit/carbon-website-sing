@@ -25,25 +25,25 @@ const FEATURES: Feature[] = [
     id: "2",
     title: "AI-assisted synthesis",
     subtitle: "AI-assisted synthesis across Bursa, GRI, ISSB, and TCFD frameworks",
-    icon: "/icons/ai.png",
+    icon: "/i.png",
   },
   {
     id: "3",
     title: "Real-time tracking",
     subtitle: "Real-time tracking of section- and question-wise completion",
-    icon: "/icons/tracking.png",
+    icon: "/svg.png",
   },
   {
     id: "4",
     title: "Audit-ready logs",
     subtitle: "Audit-ready logs with role-based approvals and version history",
-    icon: "/icons/logs.png",
+    icon: "/efw.png",
   },
   {
     id: "5",
     title: "Auto-generated reports",
     subtitle: "Auto-generated reports in Bursa, GRI, ISSB, and IFRS formats",
-    icon: "/icons/reports.png",
+    icon: "/nk.png",
   },
 ];
 

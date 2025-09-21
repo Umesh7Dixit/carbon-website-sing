@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 // import ContactForm from "./components/ContactForm";
 import { ContactProvider } from './components/ContactContext';
+import ContactPage from "./whyus/components/ContactPage";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -14,7 +15,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "RePut.ai",
+  title: "CarbonScan.ai",
   description: "Sustainability",
 };
 
@@ -32,6 +33,7 @@ export default function RootLayout({
           <Navbar/>
           {children}
           {/* <ContactForm/> */}
+            <ContactPage/>
           <Footer/>
         </ContactProvider>
       </body>

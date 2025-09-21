@@ -1,8 +1,12 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { useContact } from "../../../components/ContactContext"; 
+
 
 export default function CarbonZeroPlatform(){
+    const { scrollToContact } = useContact();
+  
   return (
     <div className="min-h-screen bg-white py-16 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
@@ -26,7 +30,7 @@ export default function CarbonZeroPlatform(){
 
             {/* CTA Button */}
             <div>
-              <button className="bg-green-400 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-full flex items-center space-x-3 transition-colors duration-200 text-lg">
+              <button onClick={scrollToContact} className="bg-[#8DD95B] cursor-pointer hover:bg-[#8dd95bcd] text-white font-semibold px-8 py-4 rounded-full flex items-center space-x-3 transition-colors duration-200 text-lg">
                 <span>Discover more about the platform</span>
                 <ArrowRight className="w-5 h-5" />
               </button>

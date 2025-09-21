@@ -1,24 +1,27 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import { useContact } from "../components/ContactContext"; 
 
 export default function CarbonFootprint() {
+  const { scrollToContact } = useContact();
+
   return (
     <section className="bg-[#1A3A3A] py-16">
-      <div className="max-w-8xl mx-auto px-6">
+      <div className="max-w-8xl mx-auto px-25">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left side text */}
           <div className="text-left lg:pr-8">
-            <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
+            <h1 className="text-3xl md:text-[60px] font-light text-white leading-snug">
               Let’s do a quick calculation for your{" "}
-              <span className="text-green-400">carbon footprint</span>
+              <span className="text-[#8DD95B]">carbon footprint</span>
             </h1>
-            <div className="mt-8">
-              <a
+            <div className="mt-8" onClick={scrollToContact}>
+              <a 
                 href="#"
-                className="inline-flex items-center bg-green-400 hover:bg-green-500 text-black font-medium px-6 py-3 rounded-full transition-colors"
+                className="inline-flex items-center bg-[#8DD95B] hover:bg-[#8dd95bdb] text-black font-medium px-6 py-3 rounded-full transition-colors"
               >
-                Get Started
+                Get Started 
                 <svg
                   className="ml-2 w-4 h-4"
                   fill="none"
@@ -37,7 +40,7 @@ export default function CarbonFootprint() {
           </div>
 
           {/* Right side image */}
-          <div className="relative w-full h-[500px] lg:h-[600px]">
+          <div  className="relative w-full h-[500px] lg:h-[600px]">
             <Image
               src="/cfcalc.png"
               alt="Carbon Simulation"

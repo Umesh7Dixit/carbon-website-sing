@@ -1,8 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { useContact } from "../../../components/ContactContext"; 
+
 
 export default  function RawData(){
+    const { scrollToContact } = useContact();
+
   return (
     <section className="bg-white w-full h-screen">
       <div className="max-w-8xl mx-auto h-full flex items-center px-4">
@@ -17,7 +21,8 @@ export default  function RawData(){
                 Why spend months on manual carbon accounting when it can be done in minutes? Carbon Scan&apos;s AI platform ingests your data streams, calculates footprint across value chains, and produces actionable insights instantly. Embed sustainability into daily decisions, not just annual reports.
             </p>
             <br/>
-            <button
+            <button 
+                  onClick={scrollToContact}
                   className="px-8 py-3 w-[38%] rounded-full  border border-[#8DD95B] text-bllalck font-medium hover:bg-[#8DD95B] focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-colors bg-[#8DD95B] duration-200 disabled:bg-green-600 disabled:cursor-not-allowed"
                 >
                   Watch a demo

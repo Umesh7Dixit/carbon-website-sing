@@ -2,8 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import Image from 'next/image';
+import { useContact } from "../../../components/ContactContext"; 
+
 
 export default function AccurateResultsScreen (){
+
+    const { scrollToContact } = useContact();
+  
+
   const features = [
     {
       title: "Trusted Methodology",
@@ -164,6 +170,7 @@ export default function AccurateResultsScreen (){
             <motion.div variants={buttonVariants}>
               <motion.button
                 variants={buttonVariants}
+                onClick={scrollToContact}
                 whileHover="hover"
                 whileTap="tap"
                 className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
