@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useContact } from '../../components/ContactContext';
+import emailjs from "emailjs-com";
 
 
 export default function ContactPage() {
@@ -20,16 +21,47 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (!formData.name || !formData.email || !formData.message) {
+  //     alert("Please fill all fields");
+  //     return;
+  //   }
+  //   console.log("Form Submitted:", formData);
+  //   setSubmitted(true);
+  //   setFormData({ name: "", email: "", message: "" });
+  // };
+
+
+
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      alert("Please fill all fields");
-      return;
-    }
-    console.log("Form Submitted:", formData);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
-  };
+  e.preventDefault();
+  if (!formData.name || !formData.email || !formData.message) {
+    alert("Please fill all fields");
+    return;
+  }
+
+  emailjs
+    .send(
+      "service_1m4m7ep",
+      "template_zsadldb",
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      "Na1U6IjxXgt8zzexd"
+    )
+    .then(
+      () => {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+      },
+      (err) => {
+        alert("Failed to send message. " + err.text);
+      }
+    );
+};
 
   return (
     <div ref={contactRef} className="min-h-screen flex items-center justify-center px-4 py-10 bg-white">
@@ -52,7 +84,7 @@ export default function ContactPage() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your full name"
-                className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 focus:border-green-600 focus:ring-green-600"
+                className="mt-1 w-full text-[#1A3A3A] rounded-md border border-gray-300 px-3 py-2 focus:border-green-600 focus:ring-green-600"
               />
             </div>
 
@@ -64,7 +96,7 @@ export default function ContactPage() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="e.g johndoe@gmail.com"
-                className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 focus:border-green-600 focus:ring-green-600"
+                className="mt-1 w-full text-[#1A3A3A] rounded-md border border-gray-300 px-3 py-2 focus:border-green-600 focus:ring-green-600"
               />
             </div>
 
@@ -76,7 +108,7 @@ export default function ContactPage() {
                 onChange={handleChange}
                 rows={4}
                 placeholder="Tell us about your project or inquiry..."
-                className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 focus:border-green-600 focus:ring-green-600"
+                className="mt-1 w-full text-[#1A3A3A] rounded-md border border-gray-300 px-3 py-2 focus:border-green-600 focus:ring-green-600"
               />
             </div>
 
