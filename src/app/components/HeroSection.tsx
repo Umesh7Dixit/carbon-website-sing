@@ -1,19 +1,78 @@
 
 
 
-"use client";
+"use client"; 
 import Image from "next/image";
 import { useContact } from "../components/ContactContext"; 
-
+import { ExternalLink } from "lucide-react";
 
 export default function HeroSection() {
 
   const { scrollToContact } = useContact();
   
   return (
+
+    <div>
+
+      <div className="w-full bg-[#1A3A3A] text-white flex items-center justify-start px-27 py-3 border-b-1 border-[#1f4343c4]">
+      {/* <div className="flex items-center space-x-3  border-r-2 border-white">
+        <div className="bg-[#A3D86D] rounded-md p-2 flex items-center    justify-center">
+          <Image
+            src="/leaf.png" // replace with your logo path
+            alt="Carbon Software Logo"
+            width={20}
+            height={20}
+          />
+        </div>
+        <span className="text-sm font-medium text-[14px]">Carbon Software</span>
+      </div> */}
+
+      <div className="flex items-center space-x-3">
+  {/* Logo + Text */}
+  <div className="flex items-center space-x-3 pr-6 border-r-3 border-white">
+    <div className=" rounded-md p-2 flex items-center justify-center ">
+      <Image
+        src="/leaf.png"
+        alt="Carbon Software Logo"
+        width={30}
+        height={30}
+        className="w-[50] "
+      />
+    </div>
+    <span className="text-sm font-medium text-[14px]">Carbon Software</span>
+  </div>
+
+  {/* Anything that comes after the line */}
+  {/* <span className="text-sm text-[14px] font-medium text-white">Get Supply Chain Regulatory News 1× Month</span> */}
+</div>
+
+      {/* Middle: Message */}
+      <div className="hidden md:block ml-20">
+        <span className="text-sm text-[14px] font-medium mr-8">Get Supply Chain Regulatory News 1× Month</span>
+      </div>
+
+      {/* Right: Subscribe link */}
+      <div className="flex items-center space-x-1 ">
+        <div onClick={scrollToContact}>
+        <a
+          href="#"
+          className="text-sm text-[14px] underline flex items-center hover:text-[#A3D86D]"
+        >
+          Subscribe Today
+          <ExternalLink className="ml-1 h-4 w-4" />
+        </a>
+        </div>
+      </div>
+      </div>
+
+
     
         <main className="relative h-[90vh] bg-[#1A3A3A] flex items-center px-6 md:px-16 lg:px-28 overflow-hidden">
       {/* Background Image on Right */}
+
+
+
+
       <div className="absolute right-0 top-[53%]  -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] opacity-90">
         <Image
           // src="/homedash1.png" // 👈 replace with your actual image
@@ -55,7 +114,7 @@ export default function HeroSection() {
         </span>
 
         {/* Heading */}
-        <h1 className="text-[60px] sm:text-[60px] lg:text-[60px] font-bold leading-tight w-[1280px]">
+        <h1 className="text-[60px] text-white sm:text-[60px] lg:text-[60px] font-bold leading-tight w-[1280px]">
           Smarter Carbon Accounting <br />&
           <span className="text-[#8DD95B]"> Informed Decisions</span>
         </h1>
@@ -94,7 +153,9 @@ export default function HeroSection() {
           </button>
         </div>
       </div>
-    </main>
+        </main>
+
+        </div>
   );
     
 }
